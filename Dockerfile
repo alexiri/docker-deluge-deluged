@@ -1,4 +1,4 @@
-FROM deluge-base:latest
+FROM alexiri/deluge-base:latest
 
 #daemon, incoming tcp, incoming udp
 EXPOSE 58846 58946 58946/udp
