@@ -3,4 +3,7 @@ FROM alexiri/deluge-base:latest
 #daemon, incoming tcp, incoming udp
 EXPOSE 58846 58946 58946/udp
 
-CMD ["/usr/bin/deluged", "-c /config", "-d", "-L debug"]
+ENV \
+  LOGLEVEL=info
+
+CMD ["/usr/bin/deluged", "-c /config", "-d", "-L $LOGLEVEL"]
